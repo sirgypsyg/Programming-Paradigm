@@ -1,0 +1,22 @@
+public class FactorialCalculator {
+    private int number;
+
+    public FactorialCalculator(int number) {
+        this.number = number;
+    }
+
+    public long calculateFactorial() {
+        long factorial = 1;
+        for (int i = 1; i <= number; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
+
+    public static void main(String[] args) {
+        int num = 20;
+        FactorialCalculator calculator = new FactorialCalculator(num);
+        long result = calculator.calculateFactorial();
+        System.out.println(num + "! = " + result);
+    }
+}

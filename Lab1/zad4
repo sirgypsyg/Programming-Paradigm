@@ -1,0 +1,25 @@
+// 1. Rozpocznij
+// 2. Zainicjuj zmienną "silnia" na 1
+// 3. Zainicjuj zmienną "liczba" na 20
+// 4. Dla każdej liczby całkowitej "i" od 1 do "liczba":
+//      a. Pomnóż "silnia" przez "i"
+// 5. Wyświetl wynik "silnia"
+// 6. Zakończ
+
+#include <stdio.h>
+
+int main() {
+    long long silnia = 1;
+    int liczba = 20;
+
+    for (int i = 1; i <= liczba; i++) {
+        silnia *= i;
+    }
+
+    printf("%d! = %lld\n", liczba, silnia);
+
+    return 0;
+}
+//no takie w formie przepisu    
+//latwiej sobie czasmai rozplanowac cos na 
+//kartce a pozniej pisac kod

@@ -1,0 +1,8 @@
+//  W języku C++ nie można dokładnie kontrolować kolejności wykonania poszczególnych poleceń
+//  w taki sam sposób, jak w przypadku systemu, gdzie uruchomiony jest interpreter. W języku C++, kolejność 
+//  wykonywania poleceń może być różna ze względu na optymalizacje kompilatora i specyfikacje standardu języka.
+
+//Jednakże, możemy wpływać na sposób wykonywania poleceń poprzez użycie struktur danych, instrukcji warunkowych, 
+// pętli i funkcji. Ostatecznie, jednak ostateczna kolejność wykonania może być przewidywalna tylko w pewnych 
+// zakresach, a precyzyjna kontrola nad kolejnością wykonywania poleceń może być trudna do osiągnięcia w przypadku 
+// bardziej skomplikowanych programów.
