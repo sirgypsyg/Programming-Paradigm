@@ -1,0 +1,13 @@
+
+Adres: Adres to lokalizacja w pamięci komputera, gdzie przechowywana jest wartość danej. Wartość ta jest wyrażona w systemie adresowym komputera (np. w formie liczby binarnej lub szesnastkowej). Adres jest istotny dla operacji bezpośredniego dostępu do danej w pamięci.
+
+Nazwa (identyfikator): Nazwa, czyli identyfikator, to unikalna etykieta używana do odwoływania się do danej w programie. Jest to nazwa, która pozwala 
+programiście odwoływać się do danej w kodzie źródłowym. Nazwy mogą być symboliczne i nie muszą odzwierciedlać fizycznej lokalizacji danej w pamięci.
+
+Wartość: Wartość to konkretna zawartość lub informacja przechowywana przez daną. Może to być liczba, tekst, obiekt, itp. Wartość jest to, co dana reprezentuje w kontekście programu.
+
+Typ: Typ danych określa charakter danych przechowywanych przez daną, takie jak liczby całkowite, zmiennoprzecinkowe, ciągi znaków, itp. Typ danych definiuje operacje, które można na danej wykonywać oraz sposób, w jaki dane są przechowywane w pamięci. np int 4 bajty, double 8 bajtow char 1 itd.
+
+Okres życia: Okres życia danej określa czas, przez który dana jest aktywna i dostępna w programie. Może to być czas trwania działania programu (w przypadku zmiennych globalnych) lub czas istnienia bloku kodu (w przypadku zmiennych lokalnych).
+
+Zakres widoczności: Zakres widoczności (ang. scope) określa, gdzie w programie można odwoływać się do danej. Zmienne mogą być lokalne, co oznacza, że są dostępne tylko w określonym bloku kodu, lub globalne, co oznacza, że są dostępne w całym programie. Istnieją również inne zakresy widoczności, takie jak zakresy klas, struktur danych, itp.

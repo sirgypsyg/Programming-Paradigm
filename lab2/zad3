@@ -1,0 +1,19 @@
+//
+
+//var
+Zmienne zadeklarowane za pomocą let mają blokowy zakres (block scope), co oznacza, że są widoczne tylko wewnątrz bloku, w którym zostały zadeklarowane.
+
+//let
+Zmienne zadeklarowane za pomocą var mają funkcjonalny zakres (function scope), co oznacza, że są widoczne tylko wewnątrz funkcji, w której zostały zadeklarowane, lub są globalne, jeśli zostały zadeklarowane poza jakąkolwiek funkcją.
+
+//var
+Zmienne zadeklarowane za pomocą var są "podnoszone" (hoisted) na początek zakresu ich funkcji lub na poziom globalny, co oznacza, że można do nich uzyskać dostęp nawet przed faktycznym ich zadeklarowaniem. Jednak wartość takiej zmiennej będzie undefined, jeśli próbujesz uzyskać do niej dostęp przed inicjalizacją.
+
+//let
+Zmienne zadeklarowane za pomocą let nie są podnoszone, co oznacza, że dostęp do nich jest możliwy dopiero po zadeklarowaniu w kodzie.
+
+//let
+W pierwszej funkcji, jeśli zmienna name jest zadeklarowana za pomocą let, to próba dostępu do niej poza blokiem warunkowym spowoduje błąd, ponieważ zmienna name ma blokowy zakres. Natomiast jeśli zmienna name jest zadeklarowana za pomocą var, to będzie ona dostępna również poza blokiem warunkowym, ponieważ var ma funkcjonalny zakres.
+
+//var    
+W drugiej funkcji, zachowanie będzie podobne, z tym że zmienna name, zadeklarowana za pomocą var, będzie dostępna na poziomie funkcji, nawet przed zadeklarowaniem. Natomiast jeśli zmienna name byłaby zadeklarowana za pomocą let, to dostęp do niej przed zadeklarowaniem spowodowałby błąd, ponieważ zmienne let nie są podnoszone.

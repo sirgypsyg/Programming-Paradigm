@@ -1,0 +1,13 @@
+Java:
+Automatyczne zarządzanie pamięcią.
+Pamięć zwalniana przez Garbage Collection.(tak, mozemy go sami wykonac ale nie polecam)
+Ryzyko wycieków pamięci jest mniejsze.(jest to ukryte wszyxtko przed programista)
+Używane są referencje, nie ma wskaźników.(no tak przekazuje obiekyt)
+Brak bezpośredniego dostępu do pamięci.(nie)
+
+C:
+Zarządzanie pamięcią może być manualne lub dynamiczne. (vectory, new,delete)
+Pamięć zwalniana ręcznie przez programistę.(delete)
+Większe ryzyko wycieków pamięci.(pointery)
+Używane są wskaźniki.
+Bezpośredni dostęp do pamięci jest możliwy.(si)

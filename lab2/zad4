@@ -1,0 +1,5 @@
+a) Usuń kod powodujący problem w Javie. Dlaczego występuje ten problem?
+    System.out.println(v4);
+    - Bo próbujemy dodac do siebie 2 różne typy danych w javie, w js boolean jest rzutowany na 
+    inta więc nie ma takiego problemu.
+    

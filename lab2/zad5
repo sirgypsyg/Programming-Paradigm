@@ -1,0 +1,5 @@
+Różnica w outputach wynika z faktu, że w języku Perl zmienna $x ma globalny zakres, więc zmiana wartości x w funkcji g() wpływa na wartość x w funkcji f(). W przypadku języka C, zmienna x w funkcji g() jest zmienną lokalną, która ma pierwszeństwo przed zmienną globalną x, dlatego funkcja f() zwraca wartość zmiennej globalnej x.
+
+Output dla programu w języku Perl będzie 20, ponieważ zmienna $x jest modyfikowana w funkcji g() na wartość 20, a funkcja f() zwraca wartość tej zmiennej, która została zmieniona.
+
+Output dla programu w języku C będzie 10, ponieważ zmienna x w funkcji g() jest zmienną lokalną, która ma pierwszeństwo przed zmienną globalną x. Funkcja f() zwraca wartość zmiennej globalnej x, która nie została zmieniona.

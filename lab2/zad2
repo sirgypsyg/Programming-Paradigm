@@ -1,0 +1,25 @@
+//a
+    Po zmianie nazw zmiennych a, b, c na dd, ee, ff w funkcji f(x), program nadal będzie działał poprawnie, o ile te nowe nazwy zostaną również zaktualizowane w definicji funkcji. Wprowadzenie takiej zmiany nie powinno mieć żadnego wpływu na działanie programu, ponieważ zmienne w funkcji są tylko lokalnymi zmiennymi i nie mają wpływu na zmienne o tych samych nazwach w głównym programie.
+
+    Wniosek z tej zmiany jest taki, że nazwy zmiennych są jedynie symbolicznymi etykietami i ich zmiana w funkcji nie ma wpływu na działanie programu. Jednakże, z punktu widzenia czytelności i zrozumienia kodu, ważne jest stosowanie klarownych i opisowych nazw zmiennych, aby ułatwić innym programistom zrozumienie kodu oraz utrzymanie go w przyszłości.
+    
+
+//b
+    function f(x, dd, ee, ff, a) result(modified_a)
+    real :: x
+    integer :: dd, ee, ff, a
+    integer :: modified_a
+
+    a = dd * x * x + ee * x + ff
+    modified_a = a
+
+    Po wykonaniu tego programu można zaobserwować, że wartość zmiennej a zmienia się po wywołaniu funkcji f, co oznacza, że modyfikacja zmiennej a w funkcji f została wykonana poprawnie. W ten sposób potwierdzamy, że można modyfikować zmienne przekazywane do funkcji w Fortranie.
+
+//c
+    tak na prawde to common jak w innych jezykach programowania mowi ze te zmienne beda globalne.
+
+//d
+    Jeśli usuniemy deklarację integer a, b, c z programu, to Fortran będzie próbował interpretować te zmienne na podstawie ich użyć w kodzie. W takim przypadku, jeśli zmienne a, b, i c są używane jako argumenty funkcji f(x) typu real, to Fortran będzie traktował je jako zmienne typu real. Jeśli jednak są używane jako argumenty funkcji typu integer, zostaną one traktowane jako zmienne typu integer. To samo dotyczy zmiennej i w pętli do, która będzie interpretowana jako zmienna typu integer, ponieważ jest używana jako indeks pętli.
+
+//e
+    Jeśli zmienimy typ funkcji f(x) na integer, to funkcja będzie zwracać wynik jako wartość całkowitą. W takim przypadku, jeśli wynik operacji będzie zmiennoprzecinkowy, zostanie on zaokrąglony do najbliższej liczby całkowitej.
