@@ -1,0 +1,7 @@
+a) \bs\d{4}\b
+b) \b[A-Z]{3}\d{6}\b
+c) (a|b)*bbab(a|b)*
+d) \b(a[a-c]*a)\b|\b(b[a-c]*b)\b|\bc[a-c]*c\b lub (\b(a[a-c]*a)\b)|(\b(b[a-c]*b)\b)|(\b(c[a-c]*c)\b)
+e) \b(?![a-b]*aa[a-b]*\b)[a-b]+\b
+f) \b(?![a-c]*aa[a-c]*\b)[a-c]+\b
+g) \b(?:b*ab*ab*)*\b lub b*(ab*ab*)*
