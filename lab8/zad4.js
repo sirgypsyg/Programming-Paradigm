@@ -2,6 +2,8 @@ function generateRandom(min,max){
     return Math.floor(Math.random() * (max-min + 1) + min);
 }
 
+console.log(generateRandom(2,3))
+
 let array = [];
 
 for (let i = 0; i < 10; i++) {

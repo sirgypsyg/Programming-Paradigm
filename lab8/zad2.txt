@@ -1,0 +1,11 @@
+a)
+    Opisz różnicę między let / const / var .
+
+    Zmienne deklarowane za pomocą let/var można w przyszłości zmienić ,
+    const nie jesteśmy w stanie podstawić nowej wartości.
+
+    let i const mają zasięg blokowy, a var funkcyjny
+
+
+b)
+     JavaScript jest językiem o dynamicznym typowaniu, co oznacza, że typy zmiennych są określane dynamicznie w czasie wykonywania programu, a nie statycznie podczas kompilacji. Oznacza to, że zmienna może być przypisana do różnych typów danych w trakcie działania programu. Jednak od wprowadzenia ECMAScript 6 (ES6) w 2015 roku w JavaScript wprowadzono także możliwość deklaracji zmiennych z użyciem słów kluczowych let i const, które wprowadzają pewne ograniczenia co do przypisywania nowych wartości, co może być rozumiane jako pewne ograniczenie silnego typowania.
