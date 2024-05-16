@@ -25,8 +25,6 @@ currentUser.show()
 currentUser.setActive(false)
 currentUser.show()
 
-
-
 const car ={
     brand: "Ford",
     test: {
