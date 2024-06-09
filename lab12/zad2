@@ -1,0 +1,37 @@
+Typy rekurencyjne są definiowane z użyciem konstruktorów, które mogą odnosić się do typu, który jest właśnie definiowany. To pozwala na tworzenie struktur o dowolnej głębokości.
+
+Rekurencyjne wzorce dopasowania:
+Definicja typu rekurencyjnego:
+Typy rekurencyjne są definiowane z użyciem konstruktorów, które mogą odnosić się do typu, który jest właśnie definiowany. To pozwala na tworzenie struktur o dowolnej głębokości.
+
+Rekurencyjne wzorce dopasowania:
+Wzorce dopasowania w Haskellu pozwalają na dopasowanie do dowolnej struktury danych, w tym do typów rekurencyjnych.
+
+Rekurencja strukturalna:
+W przypadku typów rekurencyjnych często używa się rekurencji strukturalnej, gdzie funkcja wywołuje siebie dla mniejszych części struktury danych, aż osiągnie przypadek bazowy.
+
+main :: IO ()
+main = do
+     print (kw (Nast (Nast (Nast Zero))))
+     print (razyNat (Nast (Nast (Nast Zero)), Nast (Nast (Nast Zero))))
+
+data Nat = Zero | Nast Nat
+
+nat2int :: Nat -> Integer
+nat2int Zero = 0
+nat2int (Nast x) = 1 + nat2int x
+
+instance Show Nat where
+    show x = show (nat2int x)
+
+dodNat :: (Nat, Nat) -> Nat
+dodNat (x, Zero) = x
+dodNat (x, Nast y) = Nast (dodNat (x, y))
+
+razyNat :: (Nat, Nat) -> Nat
+razyNat (x, Zero) = Zero
+razyNat (x, Nast y) = dodNat (x, razyNat (x, y))
+
+kw :: Nat -> Integer
+kw Zero = 0
+kw (Nast x) = nat2int(Nast x) * nat2int(Nast x)

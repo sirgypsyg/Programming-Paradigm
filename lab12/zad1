@@ -1,0 +1,26 @@
+1: Lazy Evaluation - Haskell wykorzystuje leniwe obliczanie, co oznacza, 
+że wartości są obliczane tylko wtedy, gdy są potrzebne.
+
+2: Eliminacja Martwego Kodu
+Haskell potrafi rozpoznać i pominąć nieużywane wartości. W przykładzie ([1..], 5), lista [1..] nigdy nie jest używana, więc Haskell jej nie generuje ani nie przechowuje w pamięci.
+
+3: Specjalizacje Funkcji
+Funkcja kw jest bardzo prosta (kw x = x * x). Kompilator Haskella może zoptymalizować tę funkcję, przekształcając ją w bezpośrednie operacje arytmetyczne w kodzie maszynowym.
+
+
+
+
+main :: IO ()
+main = do
+  let x = takeWhile (<50) (map kw [0..])
+  print(x)
+kw :: Integer -> Integer
+kw x = x*x
+
+
+main :: IO ()
+main = do
+  let y = kw (snd ([1..],5))
+  print(y)
+kw :: Integer -> Integer
+kw x = x*x

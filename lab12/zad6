@@ -1,0 +1,32 @@
+append :: [Integer] -> [Integer] -> [Integer]
+append l m = l ++ m
+
+member :: (Integer) -> [Integer] -> Bool
+member _ [] = False
+member x (head:tail)
+  | x == head = True
+  | otherwise = member x tail
+
+delete :: Integer -> [Integer] -> [Integer]
+delete _ [] = []
+delete x (head:tail)
+  | x == head = tail -- albo :?
+  | otherwise = head:delete x tail
+  
+split :: Integer -> [Integer] -> [[Integer]]
+split _ [] = [[], []]
+split x (head:tail)
+  | x > head = [head : list1, list2]
+  | x < head = [list1, head : list2]  
+  | otherwise = [list1, list2]  
+  where
+    [list1, list2] = split x tail  
+    
+main :: IO ()
+main = do
+  let l1 = [1,2,3,4]
+  let l2 = [10,25,13,8]
+  print (append l1 l2)
+  print (last l1)
+  print(delete 2 l1)
+  print (split 15 l2)

@@ -1,0 +1,9 @@
+// Napisz funkcję, która pobiera listę i zwraca tę samą listę z elementami w odwróconej kolejności, nie korzystając z gotowej funkcji reverse.
+
+rev :: String -> String
+rev [] = []
+rev (head:tail) = rev(tail) ++ [head]
+
+revList :: [Integer] -> [Integer]
+revList [] = []
+revList (head:tail) = revList tail ++ [head]

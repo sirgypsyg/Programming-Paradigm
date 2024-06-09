@@ -1,0 +1,12 @@
+data Color = Black | White | Blue | Yellow | Red
+    deriving (Show, Eq, Ord)
+
+colors :: [Color]
+colors = [Black, White, Blue, Yellow, Red]
+
+uniqueColorPairs :: [(Color, Color)]
+uniqueColorPairs = [(x, y) | x <- colors, y <- colors, x < y]
+
+main :: IO ()
+main = do
+    print uniqueColorPairs
